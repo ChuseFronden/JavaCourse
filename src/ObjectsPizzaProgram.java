@@ -1,0 +1,36 @@
+import java.text.DecimalFormat;
+
+
+       public class Pizza {
+		
+    	private  String name;
+		private  double price;
+		
+		public Pizza(String name, double price) {
+			
+			this.name = name;
+			this.price = price;
+		}
+		
+		public String getName() {
+			return name;
+		}
+		
+		public double getPrice() {
+			return price;
+		}
+		DecimalFormat twoZero = new DecimalFormat("0.00");
+		public String toString() {
+			return name+" ("+twoZero.format(price).replace(".", ",")+" euros)";
+		}
+		}
+       public class ObjectsPizzaProgram {
+    		public static void main(String[] args) {
+    			Pizza firstPizza = new Pizza("Diavolo",8.75);
+    			Pizza secondPizza = new Pizza("Frutti al Mare",9.00);
+    			Pizza thirdPizza = new Pizza("Alla Pollo",7.50);
+    			System.out.println(firstPizza.toString());
+    			System.out.println(secondPizza.toString());
+    			System.out.println(thirdPizza.toString());
+    		      }
+    	       }
